@@ -1,0 +1,51 @@
+table{
+  width:500px;
+}
+tr[class="read"]{
+  background-image:linear-gradient( gray, blue);
+}
+tr[class="to-read"]{
+  background-image:linear-gradient( lightgreen, green);
+
+}
+tr[class="in-progress"]{
+  background-image:linear-gradient( pink, red);
+
+}
+span{
+  display:inline-block;
+}
+tr[class="to-read"] span[class="status"]{
+  border:2px solid gray;
+  background-image:linear-gradient( lightgreen, brown);
+}
+tr[class="read"] span[class="status"]{
+  border:2px solid gray;
+  background-image:linear-gradient( lightgreen, white);  
+}
+tr[class="in-progress"] span[class="status"]{
+  border:2px solid gray;
+  background-image:linear-gradient( lightgreen, green);  
+}
+span[class="status"], span[class^="rate"]{
+  height:5px;
+  width:10px;
+  padding:1px;
+}
+span[class^="rate"]>span{
+  border:3px solid red;
+  border-radius:55%;
+  margin:2px;
+  height:5px;
+  width:10px;
+  background-color:gray;
+}
+span[class~=one]>:first-child{
+  background-image:linear-gradient( red, blue);  
+}
+span[class~="two"]>:nth-child(-n+2){
+  background-image:linear-gradient( yellow, green);  
+}
+span[class~="three"]>span{
+  background-image:linear-gradient( yellow, green);  
+}
